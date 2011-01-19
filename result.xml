@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OTA_HotelAvailRS xmlns="http://www.opentravel.org/OTA/2007B" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atrapalo.com/api/schemas/OTA/2007B/OTA_HotelAvailRS.xsd" Target="Test" Version="1.0" PrimaryLangID="es_ES" EchoTocken="churruapa">
+    <Success/>
+    <Warnings>
+        <Warning RPH="W101I111">No exact match for CityName Tag. Retrieving names which are similar, that slows your request, please refine it for faster results.</Warning>
+        <Warning RPH="3">W101I130: Missed AgeQualifyinCode in a GuestCount Tag. Adult (code 10) considered.</Warning>
+    </Warnings>
+    <HotelStays>
+        <HotelStay RoomStayRPH="17038">
+            <BasicPropertyInfo HotelCode="17038" HotelSegmentCategoryCode="5GL" HotelName="Only For Test (do Not Book)">
+                <VendorMessages>
+                    <VendorMessage>
+                        <SubSection>
+                            <Paragraph>
+                                <Text>
+                                    <![CDATA[No contratar. Hotel para pruebas. Repetimos es hotel de prueba
+        <br/>Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. Please, do not book this hotel. DO NOT BOOK. ]]>
+        </Text>
+        </Paragraph></SubSection></VendorMessage></VendorMessages>
+        <Position Latitude="-4.29164" Longitude="15.40283"/>
+        <Address>
+            <CityName>Congonitta</CityName>
+            <StateProv>Congonitta</StateProv>
+            <CountryName>El Congo</CountryName>
+            <RelativePosition Distance="-1.00000" DistanceUnitName="Km" Name="city center"/>
+            </Address>
+            </BasicPropertyInfo>
+            </HotelStay>
+            <HotelStay RoomStayRPH="102262"><BasicPropertyInfo HotelCode="102262" HotelSegmentCategoryCode="MOT" HotelName="Can Robin"><VendorMessages><VendorMessage><SubSection><Paragraph><Text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus. Sed ornare. Integer semper velit vel lectus. Nunc eget est. Nulla libero justo, venenatis lobortis, aliquam non, dignissim sed, massa. Duis ligula justo, sagittis non, dapibus non, sollicitudin ut, est. Sed volutpat elit vestibulum diam. Ut quis libero. Cras lobortis suscipit ante. Cras ac sapien sit amet mauris blandit gravida. Suspendisse scelerisque, nisi ut bibendum consequat, arcu massa porttitor leo, a gravida metus purus ac libero. Vestibulum eu sapien quis ligula adipiscing gravida. Proin hendrerit, lectus vitae molestie euismod, sem magna aliquet dolor, ac pretium nisi turpis eget nisl. Praesent in nisi. Pellentesque gravida sodales tellus. Fusce commodo eros non urna euismod eleifend. Nunc risus turpis, sollicitudin eu, laoreet quis, hendrerit ut, enim. Sed tortor nisl, bibendum sit amet, placerat eget, dictum vel, risus. Aenean id eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<br/>
+        <br/>Praesent id est. Suspendisse elit arcu, adipiscing at, gravida non, vestibulum vitae, nulla. Proin imperdiet. Curabitur dignissim, mi vel sagittis vulputate, metus est varius libero, at fermentum justo tortor id neque. Cras quam neque, commodo quis, sagittis non, scelerisque sit amet, nibh. Praesent imperdiet libero imperdiet dui. Duis vitae pede. Proin orci sapien, varius vitae, varius non, ornare vitae, justo. Proin dignissim lacinia dui. Phasellus cursus eros nec tellus. Nulla facilisi. Aenean accumsan, neque eu aliquet lobortis, tellus sem tincidunt justo, et congue quam urna vitae dui. In et orci. Curabitur egestas. Nunc quis nisi. Quisque feugiat diam non ipsum. Maecenas felis. Ut vestibulum nisi sit amet quam. ]]></Text></Paragraph></SubSection></VendorMessage></VendorMessages><Position Latitude="" Longitude=""/><Address><CityName>Congonitta</CityName><StateProv>Congonitta</StateProv><CountryName>El Congo</CountryName><RelativePosition Distance="-1.00000" DistanceUnitName="Km" Name="city center"/></Address></BasicPropertyInfo></HotelStay><HotelStay RoomStayRPH="131363"><BasicPropertyInfo HotelCode="131363" HotelSegmentCategoryCode="A1" HotelName="Can Agile (DO NOT BOOK)"><VendorMessages><VendorMessage><SubSection><Paragraph><Text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus. Sed ornare. Integer semper velit vel lectus. Nunc eget est. Nulla libero justo, venenatis lobortis, aliquam non, dignissim sed, massa. Duis ligula justo, sagittis non, dapibus non, sollicitudin ut, est. Sed volutpat elit...
+                                    <br/>]]>
+                                </Text>
+                            </Paragraph>
+                        </SubSection>
+                    </VendorMessage>
+                </VendorMessages>
+                <Position Latitude="-0.22802" Longitude="15.82766"/>
+                <Address>
+                    <CityName>Congonitta</CityName>
+                    <StateProv>Congonitta</StateProv>
+                    <CountryName>El Congo</CountryName>
+                    <RelativePosition Distance="-1.00000" DistanceUnitName="Km" Name="city center"/>
+                </Address>
+            </BasicPropertyInfo>
+        </HotelStay>
+    </HotelStays>
+    <RoomStays>
+        <RoomStay RPH="17038">
+            <RoomTypes>
+                <RoomType RoomType="Doble" RoomTypeCode="2"/>
+            </RoomTypes>
+            <Total AmountBeforeTax="60" AmountAfterTax="60" CurrencyCode=""/>
+        </RoomStay>
+        <RoomStay RPH="102262">
+            <RoomTypes>
+                <RoomType RoomType="Doble" RoomTypeCode="2"/>
+            </RoomTypes>
+            <Total AmountBeforeTax="100" AmountAfterTax="100" CurrencyCode=""/>
+        </RoomStay>
+        <RoomStay RPH="131363">
+            <RoomTypes>
+                <RoomType RoomType="Doble" RoomTypeCode="2"/>
+            </RoomTypes>
+            <Total AmountBeforeTax="200" AmountAfterTax="200" CurrencyCode=""/>
+        </RoomStay>
+    </RoomStays>
+    <TPA_Extensions>
+        <ATR_OTA_EXT_HotelAvailRS xmlns="http://www.atrapalo.com/hotels/OTA_extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atrapalo.com/api/schemas/OTA/ATR_OTA_Extension_HotelAvailRS.xsd">
+            <Photos PhotosRPH="17038">
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/17038/5/87/60/1]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/17038/5/87/60/2]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/17038/5/87/60/3]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/17038/5/87/60/4]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/17038/5/87/60/5]]></PhotoUrl>
+            </Photos>
+            <HotelAmenities HotelAmenitiesRPH="17038">
+                <Amenity AtrapaloCode="12"><![CDATA[Aparcamiento cubierto]]></Amenity>
+                <Amenity AtrapaloCode="13"><![CDATA[Aparcamiento descubierto]]></Amenity>
+                <Amenity AtrapaloCode="15"><![CDATA[Parking / garaje]]></Amenity>
+                <Amenity AtrapaloCode="30"><![CDATA[Piscina exterior]]></Amenity>
+            </HotelAmenities>
+            <Links>
+                <HotelInfoLink RPH="17038"><![CDATA[http://www.atrapalo.com/hoteles/index.php?pg=busqueda_por_hotel&id_hotel=17038&id_destino=1826&nombre_destino=Congonitta&num_noches=1&fecha_entrada=21/06/2010&fecha_salida=22/06/2010&num_habitaciones=1&num_adultos_1=2&num_ninos_1=0&utm_source=domain.com&utm_medium=affiliates&utm_campaign=domain]]></HotelInfoLink>
+                <ReservationLink RPH="17038"><![CDATA[http://www.atrapalo.com/hoteles/index.php?pg=busqueda_por_hotel&id_hotel=17038&id_destino=1826&nombre_destino=Congonitta&num_noches=1&fecha_entrada=21/06/2010&fecha_salida=22/06/2010&num_habitaciones=1&num_adultos_1=2&num_ninos_1=0&utm_source=domain.com&utm_medium=affiliates&utm_campaign=domain]]></ReservationLink>
+            </Links>
+            <Photos PhotosRPH="102262">
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/102262/5/87/60/1]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/102262/5/87/60/2]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/102262/5/87/60/3]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/102262/5/87/60/4]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/102262/5/87/60/5]]></PhotoUrl>
+            </Photos>
+            <HotelAmenities HotelAmenitiesRPH="102262"/>
+            <Links>
+                <HotelInfoLink RPH="102262"><![CDATA[http://www.atrapalo.com/hoteles/index.php?pg=busqueda_por_hotel&id_hotel=102262&id_destino=1826&nombre_destino=Congonitta&num_noches=1&fecha_entrada=21/06/2010&fecha_salida=22/06/2010&num_habitaciones=1&num_adultos_1=2&num_ninos_1=0&utm_source=domain.com&utm_medium=affiliates&utm_campaign=domain]]></HotelInfoLink>
+                <ReservationLink RPH="102262"><![CDATA[http://www.atrapalo.com/hoteles/index.php?pg=busqueda_por_hotel&id_hotel=102262&id_destino=1826&nombre_destino=Congonitta&num_noches=1&fecha_entrada=21/06/2010&fecha_salida=22/06/2010&num_habitaciones=1&num_adultos_1=2&num_ninos_1=0&utm_source=domain.com&utm_medium=affiliates&utm_campaign=domain]]></ReservationLink>
+            </Links>
+            <Photos PhotosRPH="131363">
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/131363/5/87/60/1]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/131363/5/87/60/2]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/131363/5/87/60/3]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/131363/5/87/60/4]]></PhotoUrl>
+                <PhotoUrl><![CDATA[http://www.atrapalo.com/hoteles/photo/ticr/131363/5/87/60/5]]></PhotoUrl>
+            </Photos>
+            <HotelAmenities HotelAmenitiesRPH="131363"/>
+            <Links>
+                <HotelInfoLink RPH="131363"><![CDATA[http://www.atrapalo.com/hoteles/index.php?pg=busqueda_por_hotel&id_hotel=131363&id_destino=1826&nombre_destino=Congonitta&num_noches=1&fecha_entrada=21/06/2010&fecha_salida=22/06/2010&num_habitaciones=1&num_adultos_1=2&num_ninos_1=0&utm_source=domain.com&utm_medium=affiliates&utm_campaign=domain]]></HotelInfoLink>
+                <ReservationLink RPH="131363"><![CDATA[http://www.atrapalo.com/hoteles/index.php?pg=busqueda_por_hotel&id_hotel=131363&id_destino=1826&nombre_destino=Congonitta&num_noches=1&fecha_entrada=21/06/2010&fecha_salida=22/06/2010&num_habitaciones=1&num_adultos_1=2&num_ninos_1=0&utm_source=domain.com&utm_medium=affiliates&utm_campaign=domain]]></ReservationLink>
+            </Links>
+        </ATR_OTA_EXT_HotelAvailRS>
+    </TPA_Extensions>
+</OTA_HotelAvailRS>

@@ -1,0 +1,161 @@
+<link rel="stylesheet" type="text/css" href="/wp-content/plugins/atrapalo/css/jquery-ui-1.8.custom.css"/>
+<link rel='stylesheet' type="text/css" href="/wp-content/plugins/atrapalo/css/main.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/atrapalo/js/main.js"></script>
+<div class="block widget ">
+<h2 class="widgettitle"><?=__("Buscar Hoteles en Atrapalo.com","atrapalo")?></h2>
+<div class="widgetcontent">
+    <form action="<?=$action?>" method="post" name="busqueda" id="busqueda">
+        <input type='hidden' name='pg' id='pg' value='pre_resultado' />
+        <input type='hidden' name='nombre_destino' id='nombre_destino' value="" />
+        <input type='hidden' name='nombre_pais' id='nombre_pais' value="" />
+        <input type='hidden' name='num_noches' id='num_noches' value='0' />
+        <table border="0" style="border: 0px solid;" id="search_1" width="99%">
+            <tr>
+                <td colspan="2">
+                    <label for="nombre_destino1">Destino</label>
+                    <input id="nombre_destino1" name="nombre_destino1" style="width: 95%" size="50" type="text" value="" onchange="$('nombre_destino').value=this.value;"/>
+                    <div id="div_auto_complete" class="div_auto_complete width200"></div></td></tr>
+            <tr>
+                <td>
+                    <label for="fecha_entrada">Entrada&nbsp;</label>
+                    <input size="10" class="w70px" name="fecha_entrada" id="fecha_entrada" readonly="readonly" type="text" value="" />
+                </td>
+                <td>
+                    <label for="fecha_salida">Salida&nbsp;</label>
+                    <input size="10" class="w70px" name="fecha_salida" id="fecha_salida" readonly="readonly" type="text" value="" />
+                </td></tr></table>
+        <table border="0" style="border: 0px solid;">
+            <tr>
+                <td>
+                    <label for="num_habitaciones">Hab.</label>
+                    <select name="num_habitaciones" id="num_habitaciones" onchange="mostrarFilasHabitaciones(this.value)">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2" >2</option>
+                        <option value="3" >3</option>
+                        <option value="4" >4</option>
+                        <option value="5" >5</option>
+                    </select></td>
+                <td>
+                    <label for="num_adultos_1">Adultos</label>
+                    <select name="num_adultos_1" id="num_adultos_1" onchange="actualizaNinos(1);"><option value="1">1</option><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+                <td>
+                    <label for="num_ninos_1">Niños</label>
+                    <select name="num_ninos_1" id="num_ninos_1" onchange="actualizaAdultos(1); mostrarInputsEdades(this.selectedIndex,1);"><option value="0" selected="selected">0 </option><option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option></select></td></tr>
+            <tr id="label_edad_1" class="oculto">
+                <td colspan="3">
+                    <label class="">Edad de los niños</label></td></tr>
+            <tr>
+                <td colspan="3">
+                    <div id="div_edades_1" class="oculto ">
+                        <select id="edad_1_1" name="edad_1_1"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_1_2" name="edad_1_2"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_1_3" name="edad_1_3"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div></td></tr>
+            <tr id="fila_hab_2_a" class="oculto">
+                <td>&nbsp;</td>
+                <td>
+                    <label for="num_adultos_2">Adultos</label></td>
+                <td>
+
+                    <label for="num_ninos_2">Niños</label></td></tr>
+            <tr id="fila_hab_2_b" class="oculto">
+                <td>Hab. 2</td>
+                <td><select name="num_adultos_2" id="num_adultos_2" onchange="actualizaNinos(2);"><option value="1">1</option><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+                <td><select name="num_ninos_2" id="num_ninos_2" onchange="actualizaAdultos(2); mostrarInputsEdades(this.selectedIndex,2);"><option value="0" selected="selected">0 </option><option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option></select></td>
+            </tr>
+            <tr id="label_edad_2" class="oculto">
+                <td colspan="3"><label>Edad de los niños</label></td>
+            </tr>
+            <tr id="fila_hab_2_c" class="oculto">
+                <td colspan="3">
+                    <div id="div_edades_2" class="oculto ">
+                        <select id="edad_2_1" name="edad_2_1"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_2_2" name="edad_2_2"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_2_3" name="edad_2_3"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div></td></tr>
+            <tr id="fila_hab_3_a" class="oculto">
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <label for="num_adultos_3">Adultos</label></td>
+                <td>
+
+                    <label for="num_ninos_3">
+                        Niños</label></td></tr>
+            <tr id="fila_hab_3_b" class="oculto">
+                <td>
+                    Hab. 3</td>
+                <td>
+                    <select name="num_adultos_3" id="num_adultos_3" onchange="actualizaNinos(3);"><option value="1">1</option><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+
+                <td>
+                    <select name="num_ninos_3" id="num_ninos_3" onchange="actualizaAdultos(3); mostrarInputsEdades(this.selectedIndex,3);"><option value="0" selected="selected">0 </option><option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option></select></td></tr>
+            <tr id="label_edad_3" class="oculto">
+                <td colspan="3">
+                    <label class="">
+                        Edad de los niños</label></td></tr>
+            <tr id="fila_hab_3_c" class="oculto">
+                <td colspan="3">
+                    <div id="div_edades_3" class="oculto ">
+                        <select id="edad_3_1" name="edad_3_1"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_3_2" name="edad_3_2"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_3_3" name="edad_3_3"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div></td></tr>
+            <tr id="fila_hab_4_a" class="oculto">
+                <td>
+                    &nbsp;
+                </td>
+                <td><label for="num_adultos_4">Adultos</label></td>
+                <td>
+                    <label for="num_ninos_4">
+                        Niños</label></td></tr>
+            <tr id="fila_hab_4_b" class="oculto">
+                <td>Hab. 4</td>
+                <td>
+                    <select name="num_adultos_4" id="num_adultos_4" onchange="actualizaNinos(4);"><option value="1">1</option><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+                <td>
+                    <select name="num_ninos_4" id="num_ninos_4" onchange="actualizaAdultos(4); mostrarInputsEdades(this.selectedIndex,4);"><option value="0" selected="selected">0 </option><option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option></select></td></tr>
+            <tr id="label_edad_4" class="oculto">
+                <td colspan="3">
+                    <label class="">Edad de los niños</label></td></tr>
+            <tr id="fila_hab_4_c" class="oculto">
+                <td colspan="3">
+                    <div id="div_edades_4" class="oculto">
+                        <select id="edad_4_1" name="edad_4_1"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_4_2" name="edad_4_2"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_4_3" name="edad_4_3"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div>
+                </td></tr>
+            <tr id="fila_hab_5_a" class="oculto">
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <label for="num_adultos_5">
+                        Adultos</label></td>
+                <td>
+                    <label for="num_ninos_5">
+                        Niños</label></td></tr>
+            <tr id="fila_hab_5_b" class="oculto">
+                <td>
+                    Hab. 5</td>
+                <td>
+                    <select name="num_adultos_5" id="num_adultos_5" onchange="actualizaNinos(5);"><option value="1">1</option><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+                <td>
+                    <select name="num_ninos_5" id="num_ninos_5" onchange="actualizaAdultos(5); mostrarInputsEdades(this.selectedIndex,5);"><option value="0" selected="selected">0 </option><option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option></select></td></tr>
+            <tr id="label_edad_5" class="oculto">
+                <td colspan="3">
+                    <label class="">
+                        Edad de los niños</label></td></tr>
+            <tr id="fila_hab_5_c" class="oculto">
+                <td colspan="3">
+                    <div id="div_edades_5" class="oculto ">
+                        <select id="edad_5_1" name="edad_5_1"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_5_2" name="edad_5_2"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                        <select id="edad_5_3" name="edad_5_3"><option value="">--</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                    </div></td></tr>
+        </table>
+        <p id="search_result" style="text-align: center">
+            <button onclick="comprobar(0);return false;" title="Buscar">Buscar</button>
+        </p>
+    </form></div>
+</div>

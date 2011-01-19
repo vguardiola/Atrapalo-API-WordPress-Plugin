@@ -1,0 +1,64 @@
+/* 
+    Document   : main
+    Created on : Jan 17, 2011, 9:20:02 PM
+    Author     : victor
+    Description:
+*/
+
+.oculto {display: none;}
+.w70px {width: 70px;}
+#wrapper{
+    margin: 0px auto;
+    text-align: left;
+    width: 960px;
+}
+
+#paging_container1{
+    height: 320px;
+}
+
+#paging_container2{
+    height: 356px;
+}
+
+#paging_container3{
+    height: 190px;
+}
+
+#paging_container4{
+    height: 307px;
+    overflow: hidden;
+}
+
+.ellipse{
+    float: left;
+}
+
+.page_navigation , .alt_page_navigation{
+    padding-bottom: 8px;
+}
+
+.page_navigation a, .alt_page_navigation a{
+    padding:3px 3px;
+    margin:2px;
+    color:black;
+    text-decoration:none;
+    float: left;
+    font-family: Arial;
+    font-size: 12px;
+}
+.active_page{
+    background-color:white !important;
+    color:black !important;
+}
+
+.content, .alt_content{
+    color: black;
+}
+.alt_content{
+    padding-left: 5px !important;
+}
+.content li, .alt_content li,.post_content .alt_content li, .content > p{
+    padding: 5px;
+    list-style: none !important;
+}

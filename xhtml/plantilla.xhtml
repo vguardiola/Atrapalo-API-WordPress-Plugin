@@ -1,0 +1,18 @@
+<li>
+    <div id="post-<?=$HotelCode?>" class="post ">
+        <div class="post-top">
+            <div class="post-title">
+                <h3><a title="<?=$HotelName?>" href="<?=$HotelInfoLink?>"><?=$HotelName?></a>
+                    <span style="font-size: 0.8em">@ <?=$CityName?>, <?=$StateProv?> (<?=$CountryName?>)</span></h3>
+                <h3>Desde <?=number_format($aRoomStay[0]->Total['AmountBeforeTax'],2)?>&euro;</h3>
+            </div>
+        </div>
+        <div class="entry clear">
+            <p><img src="<?= $aPhotos[0] ?>"  align="left" style="padding-right: 5px;" width="160" height="110" alt="<?=$HotelName?>"/>
+                <?=$HotelText?></p>
+            <p align="right">
+                <button onclick="location.href='<?=$ReservationLink?>'"><?=__("RESERVAR","atrapalo")?></button>
+            </p>
+        </div>
+    </div>
+</li>
